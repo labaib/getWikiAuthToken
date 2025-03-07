@@ -1,4 +1,3 @@
-// Ottieni token per autenticazione
 const getWikiAuthToken = async (endpoint) => {   // dominio dell'istanza Wiki da interrogare, può essere 'https://www.wikidata.org/w/api.php' oppure stanze wikibase come 'https://vicobncf.wikibase.cloud/w/api.php'
 
     // Parametri URL
