@@ -1,4 +1,4 @@
-window.getWikiAuthToken = async (endpoint) => {   // istanza Wiki da interrogare
+const getWikiAuthToken = async (endpoint) => {   // istanza Wiki da interrogare
 
     // Parametri URL
     const params = new URLSearchParams({
@@ -15,3 +15,5 @@ window.getWikiAuthToken = async (endpoint) => {   // istanza Wiki da interrogare
     return null ? token == "+\\" : token   // se il token è vuoto la funzione torna null
 
 };
+
+export { getWikiAuthToken }; 
