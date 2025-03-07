@@ -3,7 +3,7 @@ const getWikiAuthToken = async (endpoint) => {   // dominio dell'istanza Wiki da
     // Parametri URL
     const params = new URLSearchParams({
         action: "query",
-        meta: "token",
+        meta: "tokens",
         format: "json"
     });
 
