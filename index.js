@@ -7,7 +7,7 @@ const getWikiAuthToken = async (endpoint) => {   // istanza Wiki da interrogare
         format: "json"
     });
 
-    const url = `${endpoint}?${params.toString()}`; // API Endpoint per l'ottenimento del token
+    const url = `https://${endpoint}/w/api.php?${params.toString()}`; // API Endpoint per l'ottenimento del token
     const response = await fetch(url, { credentials: "include" });  // Esecuzione della chiamata
     const json = await response.json();  // Conversione della risposta
     const token = json.query.tokens.csrftoken  // Estrazione valore token di autenticazione
