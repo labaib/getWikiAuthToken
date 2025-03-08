@@ -1,3 +1,9 @@
+/**
+* Ottieni token di autenticazione Wikidata
+* @param {string} endpoint - Istanza wiki ["www.wikidata.org"]
+* @returns {string|null} - Ritorna una stringa o null
+*/
+
 const getWikiAuthToken = async (endpoint) => {   // istanza Wiki da interrogare
 
     // Parametri URL
@@ -7,12 +13,12 @@ const getWikiAuthToken = async (endpoint) => {   // istanza Wiki da interrogare
         format: "json"
     });
 
-    const url = `https://${endpoint}/w/api.php?${params.toString()}`; // API Endpoint per l'ottenimento del token
-    const response = await fetch(url, { credentials: "include" });  // Esecuzione della chiamata
-    const json = await response.json();  // Conversione della risposta
-    const token = json.query.tokens.csrftoken  // Estrazione valore token di autenticazione
+    const url = `https://${endpoint}/w/api.php?${params.toString()}`;
+    const response = await fetch(url, { credentials: "include" }); 
+    const json = await response.json();
+    const token = json.query.tokens.csrftoken  // Estrazione valore da risposta
 
-    return null ? token == "+\\" : token   // se il token è vuoto la funzione torna null
+    return null ? token == "+\\" : token
 
 };
 
