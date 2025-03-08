@@ -30,7 +30,7 @@ import { getWikiAuthToken } from './js/getWikiAuthToken.js';
  import { getWikiAuthToken } from 'https://cdn.jsdelivr.net/gh/logo94/getWikiAuthToken@main/index.js';
 
  (async () => {
-     const token = await getWikiAuthToken("https://www.wikidata.org/w/api.php");
+     const token = await getWikiAuthToken("www.wikidata.org");
  })();
 
 </script>
@@ -41,7 +41,7 @@ import { getWikiAuthToken } from './js/getWikiAuthToken.js';
   import { getWikiAuthToken } from './js/getWikiAuthToken.js';
 
   (async () => {
-    const token = await getWikiAuthToken("https://www.wikidata.org/w/api.php");
+    const token = await getWikiAuthToken("www.wikidata.org");
   })();
 
 </script>
