@@ -1,10 +1,10 @@
 /**
 * Ottieni token di autenticazione Wikidata
-* @param {string} endpoint - Istanza wiki ["www.wikidata.org"]
+* @param {string} [endpoint="www.wikidata.org"] - opzionale
 * @returns {string|null} - Ritorna una stringa o null
 */
 
-const getWikiAuthToken = async (endpoint) => {   // istanza Wiki da interrogare
+const getWikiAuthToken = async (endpoint = "www.wikidata.org") => {   // istanza Wiki da interrogare
 
     // Parametri URL
     const params = new URLSearchParams({
